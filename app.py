@@ -1,6 +1,8 @@
 from flask import Flask,render_template,request,redirect,url_for,jsonify
 import mysql.connector
 from gradio_client import Client,handle_file
+from mysql.connector import Error
+
 client = Client("HumanAIGC/OutfitAnyone")
 client2 = Client("stabilityai/stable-diffusion-3-medium")
 app = Flask(__name__)
